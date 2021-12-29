@@ -1,0 +1,24 @@
+name: Test 
+
+on:
+  push:
+    branches: ['main']
+  workflow_dispatch:
+
+jobs:
+  run-image:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run Docker action
+        uses: gsmet/github-action-playground@main
+        with:
+          who-to-greet: Guillaume
