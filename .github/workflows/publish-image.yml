@@ -20,7 +20,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Run Docker action
+      - name: Set up JDK 11
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: temurin
+
+      - name: Run action
         uses: gsmet/github-action-playground@main
         with:
           who-to-greet: Guillaume
