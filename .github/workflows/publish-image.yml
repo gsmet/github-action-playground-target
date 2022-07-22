@@ -32,3 +32,4 @@ jobs:
           who-to-greet: Guillaume
           github-token: ${{ secrets.GITHUB_TOKEN }}
           maven-repository-read-token: ${{ secrets.MAVEN_REPOSITORY_READ_TOKEN }}
+          artifact-read-token: ${{ secrets.ARTIFACT_READ_TOKEN }}
