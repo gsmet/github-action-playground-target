@@ -26,6 +26,10 @@ jobs:
           java-version: '11'
           distribution: temurin
 
+      - name: check curl in target
+        run: curl -L https://${{ secrets.MAVEN_REPOSITORY_READ_TOKEN }}@maven.pkg.github.com/gsmet/github-action-playground/io/github/gsmet/github-action-playground/1.0.0-SNAPSHOT/github-action-playground-1.0.0-20220722.093742-12.jar
+        shell: bash
+        
       - name: Run action
         uses: gsmet/github-action-playground@main
         with:
