@@ -34,9 +34,12 @@ jobs:
       #  uses: mxschmitt/action-tmate@v3
         
       - name: Run action
+        id: test
         uses: gsmet/github-action-playground@main
         with:
           who-to-greet: Guillaume
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          maven-repository-read-token: ${{ secrets.MAVEN_REPOSITORY_READ_TOKEN }}
-          artifact-read-token: ${{ secrets.ARTIFACT_READ_TOKEN }}
+      - name: Display output
+        run: |
+          echo "${{steps.test.outputs.testKey}}"
+          echo "${{steps.test.outputs.testKey2}}"
