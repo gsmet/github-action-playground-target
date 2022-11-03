@@ -38,7 +38,7 @@ jobs:
         uses: gsmet/github-action-playground@main
         with:
           who-to-greet: Guillaume
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Display output
         run: |
           echo "${{steps.test.outputs.testKey}}"
