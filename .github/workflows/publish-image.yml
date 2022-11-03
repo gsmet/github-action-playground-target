@@ -1,4 +1,7 @@
-name: Test 
+name: Test
+
+permissions:
+  packages: read
 
 on:
   push:
