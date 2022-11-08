@@ -44,5 +44,9 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Display output
         run: |
+          cat ${GITHUB_OUTPUT}
+      - name: Display output
+        run: |
           echo "${{steps.test.outputs.testKey}}"
           echo "${{steps.test.outputs.testKey2}}"
+          echo "${{join(steps.run_tests.outputs.*, '\n')}}"
