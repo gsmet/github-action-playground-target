@@ -44,6 +44,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Display output
         run: |
+          echo ${GITHUB_OUTPUT}
           cat ${GITHUB_OUTPUT}
       - name: Display output
         run: |
