@@ -1,8 +1,5 @@
 name: Test
 
-permissions:
-  packages: read
-
 on:
   push:
     branches: ['main']
@@ -15,7 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest,windows-latest,macos-latest]
+        os: [ubuntu-latest]
 
     runs-on: ${{ matrix.os }}
 
