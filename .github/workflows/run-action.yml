@@ -19,6 +19,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+      - run: cat ~/.m2/settings.xml
         
       - name: Run action
         uses: gsmet/my-github-action@main
