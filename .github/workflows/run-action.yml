@@ -19,6 +19,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+      - name: run
+        run: |
+          cat ~/.gitconfig
         
       - name: Run action
         uses: gsmet/my-github-action@main
