@@ -21,6 +21,7 @@ jobs:
         uses: actions/checkout@v4
         
       - name: Run action
-        uses: gsmet/github-action-playground@main
+        #uses: gsmet/github-action-playground@main
+        uses: gsmet/my-github-action@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
