@@ -12,20 +12,15 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest]
+        os: [ubuntu-latest, macos-latest, windows-latest]
 
     runs-on: ${{ matrix.os }}
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
-      - name: run
-        run: |
-          gh auth login --with-token <<< "${{ secrets.TOKEN }}"
-          gh repo clone gsmet/github-action-playground-target
-          cat ~/.gitconfig
+        uses: actions/checkout@v4
         
       - name: Run action
-        uses: gsmet/my-github-action@main
+        uses: gsmet/github-action-playground@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
