@@ -32,9 +32,6 @@ jobs:
           group-id: io.quarkus
           artifact-id: quarkus-core
           version: 3.6.4
-          issue-number: 18
-          message-if-published: Artifact published
-          message-if-not-published: Artifact not published
           initial-delay: 1
           poll-delay: 2
           poll-iterations: 1
