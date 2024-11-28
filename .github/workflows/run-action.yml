@@ -21,18 +21,6 @@ jobs:
         uses: actions/checkout@v4
         
       - name: Run action
-        #uses: gsmet/github-action-playground@main
         uses: gsmet/my-github-action@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Monitor artifact publication
-        uses: quarkusio/monitor-artifact-publication-action@main
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          group-id: io.quarkus
-          artifact-id: quarkus-core
-          version: 3.6.4
-          initial-delay: 1
-          poll-delay: 2
-          poll-iterations: 1
-          post-delay: 1
