@@ -22,7 +22,7 @@ jobs:
 
       - uses: gsmet/cache-action@main
         with:
-          path: .m2/repository
+          path: ~/.m2/repository
           key: my-repo
           restore-keys: my
           runs-on: false
