@@ -27,7 +27,7 @@ jobs:
           restore-keys: |
             my-re
             my
-          runs-on: false
+          runs-on: true
         
       - name: Run action
         uses: gsmet/my-github-action@main
