@@ -19,6 +19,13 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - uses: gsmet/cache-action@main
+        with:
+          path: .m2/repository
+          key: my-repo
+          restore-keys: my
+          runs-on: false
         
       - name: Run action
         uses: gsmet/my-github-action@main
