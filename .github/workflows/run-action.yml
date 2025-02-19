@@ -24,7 +24,9 @@ jobs:
         with:
           path: ~/.m2/repository
           key: my-repo
-          restore-keys: my
+          restore-keys: |
+            my-re
+            my
           runs-on: false
         
       - name: Run action
