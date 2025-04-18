@@ -45,3 +45,6 @@ jobs:
           GIB_DISABLED: '${{ steps.gib-status.outputs.maven-disable-gib }}'
         run: |
           echo "GIB: $GIB_DISABLED"
+          if [ "$GIB_DISABLED" == "true" ]; then
+            echo "disabled"
+          fi
