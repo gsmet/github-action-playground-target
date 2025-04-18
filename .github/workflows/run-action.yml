@@ -37,7 +37,7 @@ jobs:
       - name: Determines if GIB should be disabled
         id: gib-status
         run: |
-          echo "maven-disable-gib=${{ contains( github.event.issues.labels.*.name, 'ci/disable-gib') }}" >> $GITHUB_OUTPUT
+          echo "maven-disable-gib=${{ contains( github.event.issue.labels.*.name, 'ci/disable-gib') }}" >> $GITHUB_OUTPUT
 
       - name: Configure GIB
         id: configure-gib
