@@ -29,10 +29,19 @@ jobs:
             my
           runs-on: true
 
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
       - name: Run action
         uses: gsmet/my-github-action@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check Java version
+        run: java -version
 
       - name: Determines if GIB should be disabled
         id: gib-status
